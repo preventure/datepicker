@@ -1,0 +1,20 @@
+import * as React from 'react';
+import { Locale } from 'date-fns';
+import { CalendarDate, CalendarValues } from './types';
+export declare type Calendar = React.PropsWithChildren<{
+    value: CalendarValues;
+    onSelectDate: (value: CalendarDate | CalendarValues) => void;
+    months?: number;
+    locale?: Locale;
+    allowOutsideDays?: boolean;
+    disablePastDates?: boolean | Date;
+    disableFutureDates?: boolean | Date;
+    disableWeekends?: boolean;
+    disableDates?: CalendarDate[];
+    singleDateSelection?: boolean;
+    weekdayFormat?: string;
+    weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+    highlightToday?: boolean;
+    weekDateSelection?: boolean;
+}>;
+export declare function Calendar({ children, months, value, allowOutsideDays, singleDateSelection, disablePastDates, disableFutureDates, disableWeekends, disableDates, locale, weekdayFormat, onSelectDate, weekStartsOn, weekDateSelection, highlightToday, }: Calendar): JSX.Element;
